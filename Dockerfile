@@ -1,7 +1,7 @@
 FROM inseefrlab/onyxia-jupyter-pytorch:py3.11.10
 
-COPY  ./env.yaml ./env.yaml
-RUN mamba env update -n base  -f ./env.yaml && \
+COPY  ./conda-env.yml .
+RUN mamba env update -n base -f ./conda-env.yml && \
     mamba clean --all --yes
 
 USER 1000
