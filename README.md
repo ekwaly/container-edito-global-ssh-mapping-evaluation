@@ -6,3 +6,4 @@ TODO:
 - reduce container size and dependencies
 - attest the container image (use actions) for better security
 - test files and command existence
+- suggest to use fixed version
