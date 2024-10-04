@@ -1,4 +1,4 @@
-FROM inseefrlab/onyxia-jupyter-pytorch:py3.11.10
+FROM inseefrlab/onyxia-jupyter-python
 
 COPY  ./conda-env.yml .
 RUN mamba env update -n base -f ./conda-env.yml && \

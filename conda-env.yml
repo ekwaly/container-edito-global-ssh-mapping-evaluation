@@ -16,6 +16,5 @@ dependencies:
   - pip
   - papermill
   - jupyter
-  - flask
   - pip:
     - mycolorpy
