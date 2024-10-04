@@ -1,4 +1,4 @@
-name: Create and publish a Docker image
+name: Build and push Push Docker image to GitHub registry
 
 on:
   push:
@@ -8,10 +8,11 @@ on:
 
 env:
   REGISTRY: ghcr.io
+  IMAGE_NAME: onyxia-jupyter-global-ssh-mapping-evaluation
 
 jobs:
   build-and-push-image:
-    name: Build and push Push Docker image to GitHub registry
+    name: Build and push to registry
     runs-on: ubuntu-latest
     
     permissions:
@@ -45,6 +46,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}:latest
+          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
