@@ -1,7 +1,5 @@
 FROM inseefrlab/onyxia-jupyter-python
 
-COPY --chmod=755 ./docker_init_script.sh .
-
 COPY  ./conda-env.yml .
 RUN mamba env update -n base -f ./conda-env.yml && \
     mamba clean --all --yes
