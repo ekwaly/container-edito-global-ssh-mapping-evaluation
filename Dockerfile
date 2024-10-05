@@ -6,6 +6,4 @@ RUN mamba env update -n base -f ./conda-env.yml && \
 
 USER 1000
 
-EXPOSE 8888
-
-CMD ["jupyter", "lab", "--no-browser", "--ip", "0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+CMD ["echo", "Override this command with k8s options or args CLI"]
