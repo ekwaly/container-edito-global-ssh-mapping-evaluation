@@ -13,12 +13,12 @@ cd 2023a_SSH_mapping_OSE
 
 echo $PWD >> $EDITO_INFRA_OUTPUT/f2.csv
 ls -al >> $EDITO_INFRA_OUTPUT/f2.csv
-: '
+
 papermill -k python3  ../download_and_acces_global_data.ipynb $EDITO_INFRA_OUTPUT/download_and_acces_global_data_output.ipynb -p method $1 -p url $2
 
 echo $PWD >> $EDITO_INFRA_OUTPUT/f3.csv
 ls -al >> $EDITO_INFRA_OUTPUT/f3.csv
-
+: '
 ln -s ../data data
 
 echo $PWD >> $EDITO_INFRA_OUTPUT/f4.csv
