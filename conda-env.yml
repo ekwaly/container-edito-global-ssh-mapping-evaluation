@@ -16,5 +16,6 @@ dependencies:
   - pip
   - papermill
   - jupyter
+  - thredds_crawler
   - pip:
     - mycolorpy
