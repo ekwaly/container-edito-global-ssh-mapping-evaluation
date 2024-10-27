@@ -2,6 +2,8 @@ channels:
   - conda-forge
   - pyviz
 dependencies:
+  - aiofiles
+  - aiohttp
   - numpy
   - scipy
   - hvplot
